@@ -6,4 +6,4 @@
 - make
 
 # More information
-This project has been developed and tested in a Unix-like environment, utilizing the AMD64 architecture.
+This project has been developed and tested in an operating system based on the Linux kernel.

@@ -1,4 +1,4 @@
-# Learning Assembly AMD64
+# Learning Assembly AMD64 - Linux
 
 ## Build
 - git clone https://github.com/clonidine/asm-amd64

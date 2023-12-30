@@ -1,12 +1,18 @@
+SRC_DIR = src
+BUILD_DIR = build
+
+.PHONY: all clean
+
+all: run
+
 build:
-	@mkdir build
-	@nasm -felf64 fuck.S -o fuck.o
-	@ld -o fuck fuck.o
-	@rm fuck.o
-	@mv fuck build
+	@mkdir -p $(BUILD_DIR)
+	@nasm -felf64 $(SRC_DIR)/fuck.S -o $(BUILD_DIR)/fuck.o
+	@ld -o $(BUILD_DIR)/fuck $(BUILD_DIR)/fuck.o
+	@rm $(BUILD_DIR)/fuck.o
 
 run: clean build
-	@build/./fuck
+	@$(BUILD_DIR)/./fuck
 
 clean:
-	@rm -rf build
+	@rm -rf $(BUILD_DIR)
